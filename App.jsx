@@ -43,4 +43,16 @@ export default function App() {
         <h1 style={{ fontSize: "28px", fontWeight: 700, color: "white", lineHeight: 1.2, marginBottom: "4px" }}>Rota Express <span style={{ color: "#4ECDC4" }}>30™</span></h1>
         <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", marginBottom: "32px" }}>Área exclusiva para alunos</p>
         <div style={{ background: "#111D33", borderRadius: "20px", padding: "28px 24px", border: "1px solid rgba(78,205,196,0.1)" }}>
-          <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "rgba(78,205,196
+          <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "rgba(78,205,196,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontSize: "24px" }}>🔒</div>
+          <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)", marginBottom: "20px", lineHeight: 1.5 }}>Digite a senha de acesso que você<br/>recebeu junto com sua compra.</p>
+          <form onSubmit={handleLogin}>
+            <input type="password" placeholder="Senha de acesso" value={pwd} onChange={(e) => { setPwd(e.target.value); setError(false) }} autoFocus style={{ width: "100%", padding: "14px 18px", background: "rgba(255,255,255,0.06)", border: error ? "2px solid #E05555" : "2px solid rgba(78,205,196,0.2)", borderRadius: "12px", fontSize: "16px", fontFamily: "'Poppins', sans-serif", color: "white", outline: "none", textAlign: "center", letterSpacing: "2px", boxSizing: "border-box" }} />
+            {error && <p style={{ fontSize: "12px", color: "#E05555", marginTop: "8px", fontWeight: 500 }}>Senha incorreta. Verifique e tente novamente.</p>}
+            <button type="submit" style={{ width: "100%", padding: "14px", background: "#4ECDC4", color: "#0B1426", fontSize: "15px", fontWeight: 700, fontFamily: "'Poppins', sans-serif", border: "none", borderRadius: "12px", cursor: "pointer", marginTop: "16px", boxShadow: "0 4px 20px rgba(78,205,196,0.2)" }}>Acessar →</button>
+          </form>
+        </div>
+        <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.15)", marginTop: "24px", letterSpacing: "1px" }}>AILIN ORIONI · HEALTH COACH IIN</p>
+      </div>
+    </div>
+  )
+}
